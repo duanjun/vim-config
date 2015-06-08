@@ -1,15 +1,7 @@
-**This Vim configurations base form [kaochenlong/eddie-vim](https://github.com/kaochenlong/eddie-vim)**
-
-My personal Vim configurations and some plugins which I used in my daily job.
-
-I put Vim related settings in `plugin/settings/Settings.vim`, and isolate other plugins' settings in `plugin/settings` directory.
-
-you can link your `~/.vimrc` to any one of them as you wish :)
 
 ## Usage
 
 ### Installation and Requisites:
-( **Windows users** see [Vundle for Windows](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows) PLZ)
 
 1. BACKUP your `.vim` directory and `.vimrc` first.(IMPORTANT!)
 
@@ -17,7 +9,7 @@ you can link your `~/.vimrc` to any one of them as you wish :)
 
 3. copy files to your home directory:
 
-        git clone git://github.com/ywjno/vundle-vimfiles.git ～/vundle-vimfiles
+        git clone git://github.com/duanjun/vundle-vimfiles.git ～/vundle-vimfiles
 
 4. make a symbolic link `.vim` to `vundle-vimfiles` that you just cloned, or just rename it to `.vim` also be fine:
 
