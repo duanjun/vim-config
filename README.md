@@ -38,33 +38,3 @@ Launch `vim`, run `:BundleInstall`  (or `vim +BundleInstall +qall` for CLI lover
 ### Update bundles:
 
 Launch `vim`, run `:BundleInstall!`
-
-### Features and Key Mappings:
-
-1. Resize splited windows automatically, so that you  get a bigger editing room if you're working with a smaller screen. (stole from [Gary Bernhardt](https://github.com/garybernhardt))
-
-2. Toggle between working mode and presentation mode by `<leader>z`, but only work in GUI version Vim. You can check [here](http://blog.eddie.com.tw/2012/03/14/switch-to-presentation-mode/) to see how it looks like. (stole from [Mike Skalnik](https://github.com/skalnik))
-
-3. some usually used key mappings in normal mode:
-
-    a. `<F2>` to toggle NERDTree on and off.
-
-    b. `<F4>` to toggle Tagbar window.
-
-    c. `<F7>` to switch to previous tab, and `<F8>` to the next tab.
-
-    d. hit `<ctrl>p` will launch a quick window to match keywords from your current working directory, not only file name, but also path name. And `<ctrl>w u` will match from your MRU(Mostly Recent Used) files, which is also frequently used.
-
-    e. hit `<leader>` twice to toggle comment on and off.
-
-    f. `<tab>` and `<shift><tab>` to increase and decrease the syntax identation.
-
-4. Remove tailing whitespace automatically while saving.
-
-## FAQ
-
-if you can not found `ctags` command, just find your ctags path and replace my settings in `plugin/settings/Ctags.vim` file:
-
-    let g:tagbar_ctags_bin = '/your/path/to/ctags'
-
-and [Exuberant Ctags](http://ctags.sourceforge.net/) is recommended.
