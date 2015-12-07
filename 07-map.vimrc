@@ -123,3 +123,13 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " Prevent jump out from current buffer
 nnoremap <silent> <c-k> :call JumpInFile("\<c-i>", "\<c-o>")<cr>
 nnoremap <silent> <c-j> :call JumpInFile("\<c-o>", "\<c-i>")<cr>
+
+
+"fullgitive
+map <silent> <leader>gs :Gstatus <cr>
+map <silent> <leader>gd :Gdiff <cr>
+map <silent> <leader>gc :Gcommit <cr>
+map <silent> <leader>gb :Gblame  <cr>
+map <silent> <leader>gl :Glog <cr>
+map <silent> <leader>gp :Git push <cr>
+map <silent> <leader>gw :Gwrite <cr>
