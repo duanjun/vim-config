@@ -10,11 +10,6 @@ map <silent><F2> :ls<cr>
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
 
-"vimshell
-nmap <silent><Leader>tc :VimShellCreate<CR>
-nmap <silent><Leader>tt :VimShell<CR>
-nmap <silent><c-t> :VimShellPop<CR>
-
 "打开浏览器快捷键"
 nmap <silent> <Leader>c :update<CR>:silent !open -a /Applications/Google\ Chrome.app file://%:p <CR>
 
@@ -27,19 +22,24 @@ nmap <leader>v4 :e! $VIMHOME/04-lang.vimrc<cr>
 nmap <leader>v5 :e! $VIMHOME/05-autocmd.vimrc<cr>
 nmap <leader>v6 :e! $VIMHOME/06-plugin.vimrc<cr>
 nmap <leader>v7 :e! $VIMHOME/07-map.vimrc<cr>
-nmap <leader>s :e! $VIMHOME/bundle/vundle/snipMate/snippets/_.snippets<cr>
+nmap <leader>s :UltiSnipsEdit<cr>
 
 nmap <leader>r  :! node %<cr>
 "nginx
 nmap <silent><Leader>in :e /usr/local/etc/nginx/nginx.conf<CR>
+nmap <silent><Leader>wn :e /Volumes/C/nginx-1.8.0/conf/nginx.conf<CR>
 "host
 nmap <silent><Leader>ih :e /etc/hosts<CR>
+nmap <silent><Leader>wh :e /Volumes/C/Windows/System32/drivers/etc/hosts<CR>
 "目录相关
 nmap <silent><Leader>lc :cd %:p:h<CR>
+"nmap <silent><Leader>umu :cd /Users/duanjun/Documents/dj/umu_project<CR>
+"nmap <silent><Leader>umu :cd /Users/duanjun/Documents/project/umuglobal/<CR>
+nmap <silent><Leader>umu :cd /Users/duanjun/Documents/project/<CR>
+nmap <silent><Leader>bd :cd /Users/duanjun/Documents/dj/baidu_project<CR>
 
-"Ack 全局搜索"
-vmap <F2> <C-C>:Ack "/b<C-V>/b"<CR>
-vmap <M-F2> <C-C>:Ack "/b<C-V>/b"
+autocmd VimEnter * cd /Users/duanjun/Documents/project/
+autocmd VimEnter * NERDTree
 
 " 使用上下来调节窗口大小
 nmap <silent> <s-UP> <C-W>+:let t:flwwinlayout = winrestcmd()<CR>
@@ -63,6 +63,8 @@ vnoremap <C-c> "+y
 map <C-v> "+p
 nmap <C-a> ggVG
 nmap <C-s> :w<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+nmap <C-v> :r !pbpaste<CR><CR>
 
 " 切换到 shell
 map <silent> <Leader>sh :sh<CR>
@@ -98,17 +100,23 @@ nmap <Leader>S :Scratch<cr>
 " 快速跳到下一个驼峰位置
 nmap t` /[A-Z]<cr>
 
+"用空格键来开关折叠
+nnoremap <silent> <space> za
+
 "缓冲区文件切换
 nmap <silent> <tab> <esc>:bn<cr>
 nmap <silent> <s-tab> <esc>:bp<cr>
+
 
 map <c-f> :call JsBeautify()<cr>
 " or
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType dwt noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
 
 
 

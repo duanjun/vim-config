@@ -18,8 +18,9 @@ autocmd BufWritePre * set fileencoding=utf-8 "vim当前编辑的文件在存储�
 au BufRead,BufNewFile *.vm set filetype=html
 au BufRead,BufNewFile *.less set filetype=less
 au BufRead,BufNewFile *.js set fmr=/*,*/
-au BufRead,BufNewFile *.json set filetype=javascript
+"au BufRead,BufNewFile *.json set filetype=javascript
 au BufRead,BufNewFile *.html set filetype=html
+au BufRead,BufNewFile *.dwt set filetype=html
 au BufNewFile,BufRead *.as setf actionscript
 
 " 自动补全设置
@@ -39,6 +40,7 @@ autocmd! BufWritePost 04-lang.vimrc source $VIMHOME/04-lang.vimrc
 autocmd! BufWritePost 05-autocmd.vimrc source $VIMHOME/05-autocmd.vimrc
 autocmd! BufWritePost 06-plugin.vimrc source $VIMHOME/06-plugin.vimrc
 autocmd! BufWritePost 07-map.vimrc source $VIMHOME/07-map.vimrc
+
 "按esc可以直接从中文切换回英文
 set noimdisable
 autocmd! InsertLeave * set imdisable|set iminsert=0

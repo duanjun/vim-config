@@ -1,5 +1,6 @@
 "色彩主题
 colo molokai
+"colo atom-dark
 " 语法高亮
 syntax enable
 syntax on
@@ -21,7 +22,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent " 开启新行时使用智能自动缩进
-set nofoldenable "不启用折叠
 " 高亮搜索
 set hlsearch
 " 状态栏显示键入的命令
@@ -53,7 +53,7 @@ set guioptions-=b " 隐藏底部滚动条
 set showtabline=0 " 隐藏Tab栏
 
  " statusline start {{
-set statusline=%{&paste=='nopaste'?'':'[p]'}[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{&paste=='nopaste'?'':'[p]'}
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")

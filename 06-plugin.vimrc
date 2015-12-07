@@ -19,7 +19,7 @@ let g:use_emmet_complete_tag = 1
 let NERDTreeWinPos='right' "NerdTree窗口显示在右边
 
 "设置NERDTree子窗口宽度
-let NERDTreeWinSize=25
+let NERDTreeWinSize=40
 
 " statuline end}}
 
@@ -27,9 +27,8 @@ let NERDTreeWinSize=25
 "ctrp start {{
 let g:ctrlp_regexp = 1
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_root_markers = ['src']
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_max_files = 1000
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_max_files = 500
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/](_tmp|doc|Windows|System32|ie-legacy).*',
     \ 'file': '\v\.(exe|so|dll|zip|rar|tar|png|jpg|ico|swp)$',
@@ -42,7 +41,7 @@ endif
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " ag is fast enough that CtrlP doesn't need to cache
-"let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 0
 
 "ctrp end }}
 
@@ -180,22 +179,59 @@ let g:config_Beautifier = {
 \   }
 \}
 
-"neocompletecathe"
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-"Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
+" indentline 插件用的
+let g:indentLine_char = '┆'
 
-"vimshell"
-" Use current directory as vimshell prompt.
-let g:vimshell_prompt_expr =
-    \ 'escape($USER . ":". fnamemodify(getcwd(), ":~")."$", "\\[]()?! ")." "'
-let g:vimshell_prompt_pattern = '^\%(\f\)\+\:\%(\f\|\\.\)\+$ '
+let g:tern_show_signature_in_pum = 1
 
-"let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_disable_escape_highlight = 1
 
-"关掉自动提醒
-let g:loaded_acp = 1
-:set noshowmode
+" 语法检查插件
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint'
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_complete_in_comments = 1
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+
+" 比较喜欢用tab来选择补全...
+function! MyTabFunction ()
+    let line = getline('.')
+    let substr = strpart(line, -1, col('.')+1)
+    let substr = matchstr(substr, "[^ \t]*$")
+    if strlen(substr) == 0
+        return "\<tab>"
+    endif
+    return pumvisible() ? "\<c-n>" : "\<c-x>\<c-o>"
+endfunction
+inoremap <silent><tab> <c-r>=MyTabFunction()<cr>
+
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+"let g:ycm_use_ultisnips_completer = 0
+
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'gitcommit' : 1,
+      \}
+
+" To disable the highlighting put the line
+let g:JSLintHighlightErrorLine = 0

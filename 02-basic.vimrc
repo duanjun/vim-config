@@ -55,7 +55,7 @@ filetype plugin indent on
 set tags=tags
 
 set ambiwidth=double
-set mouse=
+set mouse=v
 " 即时搜索
 set incsearch
 
@@ -73,11 +73,10 @@ set wildignore+=*.exe,*.zip,*.jpg,*.png,*.gif,*.jpeg
 "相关目录设置
 set dir=$VIMTEMP
 set backup
-set colorcolumn=80 "显示right margin, 7.3+
+set colorcolumn=120 "显示right margin, 7.3+
 set undodir=$HOME/.vim/undodir
 set backupdir=$HOME/.vim/vimbackup  "设置集中备份
 
-"set foldmethod=indent
 
 "自动保存撤销历史到撤销文件。读入文件到缓冲区时，自动恢复撤销历史
 set undofile
@@ -86,10 +85,20 @@ set autoread
 set autowrite
 
 "智能提示
-let g:acp_completeOption = '.,w,b,u,t,i,k'
 set completeopt=preview,menu
 set completeopt=menuone,longest
 set pumheight=10
 
+
 "disable doc preview in omnicomplete
 set cot-=preview
+
+"折叠配置
+set foldenable              " 开始折叠
+"set foldmethod=syntax       " 设置语法折叠
+set foldmethod=indent " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+setlocal foldlevel=1        " 设置折叠层数为
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+"set foldclose=all          " 设置为自动关闭折叠
