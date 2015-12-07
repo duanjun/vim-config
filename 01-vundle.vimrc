@@ -3,57 +3,55 @@
 filetype off
 
 "/**  vundle从这行开始  **/
-set rtp+=~/.vim/bundle/vundle/vundle/
-call vundle#rc('~/.vim/bundle/vundle/')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle/vundle/')
 
-
-" let Vundle manage Vundle
-" required!
-
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 "Github网站上非vim-scripts仓库的插件，按下面格式填写
-"Bundle 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 ":vim-scripts仓库里的，按下面格式填写
-Bundle 'molokai'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'matchit.zip'
-Bundle 'less.vim'
-Bundle 'The-NERD-tree'
-Bundle 'The-NERD-Commenter'
-Bundle 'vim-scripts/Emmet.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'rking/ag.vim'
-Bundle 'taiansu/nerdtree-ag'
-Bundle 'wookiehangover/jshint.vim'
-Bundle 'EasyMotion'
-Bundle 'heavenshell/vim-jsdoc'
-Bundle 'tpope/vim-surround'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
-Bundle 'honza/vim-snippets'
-Bundle 'garbas/vim-snipmate'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'ternjs/tern_for_vim'
-"Bundle 'scrooloose/syntastic'
-"Bundle 'airblade/vim-gitgutter'
-"Bundle 'hallettj/jslint.vim'
+Plugin 'molokai'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'matchit.zip'
+Plugin 'less.vim'
+Plugin 'The-NERD-tree'
+Plugin 'The-NERD-Commenter'
+Plugin 'vim-scripts/Emmet.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'rking/ag.vim'
+Plugin 'taiansu/nerdtree-ag'
+Plugin 'wookiehangover/jshint.vim'
+Plugin 'EasyMotion'
+Plugin 'heavenshell/vim-jsdoc'
+Plugin 'tpope/vim-surround'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'hallettj/jslint.vim'
 
+call vundle#end()
 "non github repos   (非上面两种情况的，按下面格式填写)
-"Bundle 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 filetype plugin indent on     " required!
 
 
 "/** vundle命令 **/
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Plugin command are not allowed..
 
 "===================== vundle =========================================

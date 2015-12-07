@@ -3,3 +3,4 @@
 bundle/**
 undodir/**
 .vim/**
+.vim
