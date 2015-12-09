@@ -9,9 +9,8 @@ map <silent><F2> :ls<cr>
 " NERDTree快捷键
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
-
 "打开浏览器快捷键"
-nmap <silent> <Leader>c :update<CR>:silent !open -a /Applications/Google\ Chrome.app file://%:p <CR>
+nmap <silent> <Leader>c :silent !open -a /Applications/Google\ Chrome.app file://%:p&<CR>:redraw!<CR>
 
 " 快速编辑.vimrc
 nmap <leader>v  :e! $VIMHOME/vimrc<cr>
