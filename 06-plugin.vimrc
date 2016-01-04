@@ -188,7 +188,6 @@ let g:config_Beautifier = {
 
 " indentline 插件用的
 let g:indentLine_char = '┆'
-
 let g:tern_show_signature_in_pum = 1
 
 
@@ -209,9 +208,9 @@ nnoremap <silent> <F5> :call ToggleErrors()<cr>
 "let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_eslint_exec = 'eslint'
-"let g:syntastic_html_checkers=['']
+let g:syntastic_html_checkers=['']
 let syntastic_enable_signs = 0
-let g:syntastic_disabled_filetypes = ['html']
+let g:syntastic_disabled_filetypes = ['html', 'dwt']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
