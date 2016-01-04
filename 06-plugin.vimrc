@@ -48,7 +48,6 @@ let g:ctrlp_use_caching = 0
 "ctrp end }}
 
 
-
 " {{ Win平台下窗口全屏组件 gvimfullscreen.dll
 " Ctrl + Enter 全屏切换
 " Shift + t 降低窗口透明度
@@ -194,9 +193,9 @@ let g:tern_show_signature_in_pum = 1
 
 
 " 语法检查插件
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 function! ToggleErrors()
     let old_last_winnr = winnr('$')
