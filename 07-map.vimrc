@@ -39,8 +39,8 @@ nmap <silent><Leader>lc :cd %:p:h<CR>
 nmap <silent><Leader>umu :cd /Users/duanjun/Documents/project/<CR>
 nmap <silent><Leader>bd :cd /Users/duanjun/Documents/dj/baidu_project<CR>
 
-autocmd VimEnter * cd /Users/duanjun/Documents/project/
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * cd /Users/duanjun/Documents/project/
+"autocmd VimEnter * NERDTree
 
 " 使用上下来调节窗口大小
 nmap <silent> <s-UP> <C-W>+:let t:flwwinlayout = winrestcmd()<CR>
@@ -80,7 +80,7 @@ endif
 nmap <silent> <F6> :set invpaste<CR>
 
 " 切换行号
-nmap <silent> <F5> :set invnu<CR>
+"nmap <silent> <F5> :set invnu<CR>
 
 " ^L 刷新
 nnoremap <silent><C-h> :nohlsearch<CR>
@@ -139,3 +139,13 @@ map <silent> <leader>gb :Gblame  <cr>
 map <silent> <leader>gl :Glog <cr>
 map <silent> <leader>gp :Git push <cr>
 map <silent> <leader>gw :Gwrite <cr>
+
+" 恢复session
+nnoremap <leader>so :OpenSession
+nnoremap <leader>ss :SaveSession
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
+
+" 语法错误提示上一个下一个切换
+nnoremap ln :lnext<cr>
+nnoremap lp :lprevious<cr>

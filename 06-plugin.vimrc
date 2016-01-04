@@ -20,6 +20,8 @@ let NERDTreeWinPos='right' "NerdTree窗口显示在右边
 
 "设置NERDTree子窗口宽度
 let NERDTreeWinSize=40
+let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_open_on_new_tab=0
 
 " statuline end}}
 
@@ -192,24 +194,39 @@ let g:tern_show_signature_in_pum = 1
 
 
 " 语法检查插件
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint'
-
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+nnoremap <silent> <F5> :call ToggleErrors()<cr>
+"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_javascript_eslint_exec = 'eslint'
+"let g:syntastic_html_checkers=['']
+let syntastic_enable_signs = 0
+let g:syntastic_disabled_filetypes = ['html']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-
+let g:syntastic_error_symbol='>>'
+let g:syntastic_warning_symbol='>'
 
 let g:ycm_min_num_of_chars_for_completion = 3
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_complete_in_comments = 1
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 " 比较喜欢用tab来选择补全...
 function! MyTabFunction ()
@@ -241,3 +258,9 @@ let g:ycm_filetype_blacklist = {
 
 " To disable the highlighting put the line
 let g:JSLintHighlightErrorLine = 0
+
+" 恢复session
+let g:session_directory = "~/.vim/sessionbackup"
+let g:session_autoload = "yes"
+let g:session_autosave = "yes"
+let g:session_command_aliases = 1
