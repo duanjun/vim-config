@@ -155,7 +155,13 @@ endfunction
 "/*功能函数 End}}/"
 
 let g:config_Beautifier = {
+\   'jsx' : {
+\       'e4x': 'true',
+\       'indent_style': 'space',
+\       'indent_size': 4
+\   },
 \   'js': {
+\       'e4x': 'true',
 \       'path': '~/.vim/bundle/vundle/js-beautify/js/lib/beautify.js',
 \       'indent_style': 'space',
 \       'indent_size': '4',
