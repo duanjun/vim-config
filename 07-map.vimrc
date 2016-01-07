@@ -25,7 +25,10 @@ nmap <leader>v6 :e! $VIMHOME/06-plugin.vimrc<cr>
 nmap <leader>v7 :e! $VIMHOME/07-map.vimrc<cr>
 nmap <leader>s :UltiSnipsEdit<cr>
 
-nmap <leader>r  :! node %<cr>
+"nmap <leader>r  :! node --harmony %<cr>
+nmap <leader>r  :! babel-node %<cr>
+"babel
+nmap <silent><leader>b :Babel vertical<cr>
 "nginx
 nmap <silent><Leader>in :e /usr/local/etc/nginx/nginx.conf<CR>
 nmap <silent><Leader>wn :e /Volumes/C/nginx-1.8.0/conf/nginx.conf<CR>
@@ -147,5 +150,5 @@ nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
 " 语法错误提示上一个下一个切换
-nnoremap ln :lnext<cr>
-nnoremap lp :lprevious<cr>
+nnoremap en :lnext<cr>
+nnoremap ep :lprevious<cr>
