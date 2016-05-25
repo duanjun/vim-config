@@ -27,6 +27,7 @@ nmap <leader>s :UltiSnipsEdit<cr>
 
 "nmap <leader>r  :! node --harmony %<cr>
 nmap <leader>r  :! babel-node %<cr>
+nmap <leader>l  :! lebab % -o % <cr>
 "babel
 nmap <silent><leader>b :Babel vertical<cr>
 "nginx
@@ -66,7 +67,6 @@ nmap gP "0P
 vnoremap <C-c> "+y
 map <C-v> "+p
 nmap <C-a> ggVG
-nmap <C-s> :w<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 nmap <C-v> :r !pbpaste<CR><CR>
 
@@ -84,6 +84,7 @@ nmap <silent> <F6> :set invpaste<CR>
 
 " 切换行号
 "nmap <silent> <F5> :set invnu<CR>
+nmap <silent> <F5> :SyntasticCheck<cr>
 
 " ^L 刷新
 nnoremap <silent><C-h> :nohlsearch<CR>
@@ -111,8 +112,6 @@ nnoremap <silent> <space> za
 nmap <silent> <tab> <esc>:bn<cr>
 nmap <silent> <s-tab> <esc>:bp<cr>
 
-map <c-f> :call JsBeautify()<cr>
-" or
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for json
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
@@ -125,7 +124,8 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
 autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+
+vnoremap <c-h> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 
@@ -144,11 +144,24 @@ map <silent> <leader>gp :Git push <cr>
 map <silent> <leader>gw :Gwrite <cr>
 
 " 恢复session
-nnoremap <leader>so :OpenSession
-nnoremap <leader>ss :SaveSession
+nnoremap <leader>so :OpenSession <CR>
+nnoremap <leader>ss :SaveSession <CR>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
 " 语法错误提示上一个下一个切换
 nnoremap en :lnext<cr>
 nnoremap ep :lprevious<cr>
+
+
+"cmap w!! w !sudo sh -c "cat > %" <CR>
+nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
+
+"nerdtree bookmark
+nmap <silent> <c-b> :Bookmark <cr>
+nmap <leader>pc :OpenBookmark umu_pc<cr>
+nmap <leader>wp :OpenBookmark umu_wap<cr>
+nmap <leader>wps :OpenBookmark umu_wap_student<cr>
+nmap <leader>test :OpenBookmark test<cr>
+nmap <leader>git :OpenBookmark github<cr>
+nmap <leader>node :OpenBookmark node_modules<cr>

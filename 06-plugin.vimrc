@@ -17,6 +17,9 @@ let g:use_emmet_complete_tag = 1
 
 " NERDTree Ignore
 let NERDTreeWinPos='right' "NerdTree窗口显示在右边
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore= ['\.git', '\.DS_Store']
 
 "设置NERDTree子窗口宽度
 let NERDTreeWinSize=40
@@ -28,11 +31,11 @@ let g:nerdtree_tabs_open_on_new_tab=0
 
 "ctrp start {{
 let g:ctrlp_regexp = 1
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_files = 500
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](_tmp|doc|Windows|System32|ie-legacy).*',
+    \ 'dir':  '\v[\/](_tmp|git|doc|Windows|System32|ie-legacy).*',
     \ 'file': '\v\.(exe|so|dll|zip|rar|tar|png|jpg|ico|swp)$',
     \ }
 
@@ -163,7 +166,7 @@ let g:config_Beautifier = {
 \   },
 \   'js': {
 \       'e4x': 'true',
-\       'path': '~/.vim/bundle/vundle/js-beautify/js/lib/beautify.js',
+\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify.js',
 \       'indent_style': 'space',
 \       'indent_size': '4',
 \       'bin': 'node',
@@ -173,14 +176,14 @@ let g:config_Beautifier = {
 \   'html': {
 \       'brace_style': 'expand',
 \       'preserve_newlines': 'true',
-\       'path': '~/vim/bundle/vundle/js-beautify/js/lib/beautify-html.js',
+\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify-html.js',
 \       'indent_inner_html': 'true',
 \       'indent_style': 'space',
 \       'indent_size': '4',
 \       'max_char': '78'
 \   },
 \   'css': {
-\       'path': '~/vim/bundle/vundle/js-beautify/js/lib/beautify-css.js',
+\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify-css.js',
 \       'indent_style': 'space',
 \       'indent_size': '4'
 \   }
@@ -188,6 +191,10 @@ let g:config_Beautifier = {
 
 " indentline 插件用的
 let g:indentLine_char = '┆'
+" Vim
+let g:indentLine_color_term = 239
+"GVim
+"let g:indentLine_color_gui = '#A4E57E'
 let g:tern_show_signature_in_pum = 1
 
 
@@ -205,16 +212,17 @@ function! ToggleErrors()
     endif
 endfunction
 nnoremap <silent> <F5> :call ToggleErrors()<cr>
-"let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_checkers = ['jshint']
 "let g:syntastic_javascript_eslint_exec = 'eslint'
 let g:syntastic_html_checkers=['']
 let syntastic_enable_signs = 0
 let g:syntastic_disabled_filetypes = ['html', 'dwt']
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_mode_map = {'mode': 'passive'}
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol='>>'
 let g:syntastic_warning_symbol='>'
 
@@ -262,3 +270,5 @@ let g:session_directory = "~/.vim/sessionbackup"
 let g:session_autoload = "yes"
 let g:session_autosave = "yes"
 let g:session_command_aliases = 1
+" vim_json option
+let g:vim_json_syntax_conceal = 0
