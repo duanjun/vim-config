@@ -39,7 +39,7 @@ set cmdheight=2
 "窗体字体大小
 "set guifont=consolas:h16
 "set guifont=Monaco:h16
-set guifont=YaHei\ Consolas\ Hybrid:h18
+set guifont=YaHei\ Consolas\ Hybrid:h19
 "set transparency=10
 "缩放窗口时不折行显示
 set nowrap

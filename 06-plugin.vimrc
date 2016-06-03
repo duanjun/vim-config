@@ -26,6 +26,19 @@ let NERDTreeWinSize=40
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_new_tab=0
 
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+
 " statuline end}}
 
 
@@ -35,8 +48,8 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_files = 500
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/](_tmp|git|doc|Windows|System32|ie-legacy).*',
-    \ 'file': '\v\.(exe|so|dll|zip|rar|tar|png|jpg|ico|swp)$',
+    \ 'dir':  '_output$|_publish$|\.git$',
+    \ 'file': 'exe|so|dll|zip|rar|tar|png|jpg|ico|swp$',
     \ }
 
 " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
