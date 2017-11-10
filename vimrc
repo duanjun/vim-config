@@ -6,6 +6,6 @@ else
     let $VIMTEMP=$TEMP
 endif
 
-for rc in split(globpath($VIMHOME, '*.vimrc'), "\n")
+for rc in split(globpath($VIMHOME, 'config/*.vimrc'), "\n")
     exe 'source ' . rc
 endfor

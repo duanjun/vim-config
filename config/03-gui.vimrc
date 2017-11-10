@@ -1,5 +1,8 @@
 "色彩主题
+"colo onedark
+"262626 background
 colo molokai
+"121212 background
 "colo atom-dark
 " 语法高亮
 syntax enable
@@ -35,7 +38,7 @@ set ignorecase smartcase
 " 永远显示状态栏
 set laststatus=2
 " 命令行区的高度
-set cmdheight=2
+set cmdheight=1
 "窗体字体大小
 "set guifont=consolas:h16
 "set guifont=Monaco:h16

@@ -26,7 +26,7 @@ set wildmenu
 set lazyredraw
 
 " 启动时不显示介绍信息
-set shortmess=a
+set shortmess=aoOtI
 "set shortmess+=atI
 
 " 设置左右移动光标的键的回绕

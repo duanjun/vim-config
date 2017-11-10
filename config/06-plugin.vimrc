@@ -39,16 +39,15 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 
-" statuline end}}
-
 
 "ctrp start {{
 let g:ctrlp_regexp = 1
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_files = 500
+set wildignore+='*/tmp/*,*.so,*.swp,*.zip'
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '_output$|_publish$|\.git$',
+    \ 'dir':  '_output$|_publish$|weike$|\.git$',
     \ 'file': 'exe|so|dll|zip|rar|tar|png|jpg|ico|swp$',
     \ }
 
@@ -171,36 +170,6 @@ function! JumpInFile(back, forw)
 endfunction
 "/*功能函数 End}}/"
 
-let g:config_Beautifier = {
-\   'jsx' : {
-\       'e4x': 'true',
-\       'indent_style': 'space',
-\       'indent_size': 4
-\   },
-\   'js': {
-\       'e4x': 'true',
-\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify.js',
-\       'indent_style': 'space',
-\       'indent_size': '4',
-\       'bin': 'node',
-\       'jslint_happy': 'true',
-\       'space_before_conditional': 'true'
-\   },
-\   'html': {
-\       'brace_style': 'expand',
-\       'preserve_newlines': 'true',
-\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify-html.js',
-\       'indent_inner_html': 'true',
-\       'indent_style': 'space',
-\       'indent_size': '4',
-\       'max_char': '78'
-\   },
-\   'css': {
-\       'path': '~/.vim/bundle/vundle/vim-jsbeautify/plugin/lib/js/lib/beautify-css.js',
-\       'indent_style': 'space',
-\       'indent_size': '4'
-\   }
-\}
 
 " indentline 插件用的
 let g:indentLine_char = '┆'
@@ -216,6 +185,7 @@ let g:tern_show_signature_in_pum = 1
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
+
 function! ToggleErrors()
     let old_last_winnr = winnr('$')
     lclose
@@ -225,42 +195,51 @@ function! ToggleErrors()
     endif
 endfunction
 nnoremap <silent> <F5> :call ToggleErrors()<cr>
-let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_javascript_eslint_exec = 'eslint'
-let g:syntastic_html_checkers=['']
-let syntastic_enable_signs = 0
-let g:syntastic_disabled_filetypes = ['html', 'dwt']
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_mode_map = {'mode': 'passive'}
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol='>>'
-let g:syntastic_warning_symbol='>'
 
-let g:ycm_min_num_of_chars_for_completion = 3
+"语法检查另外一个插件"
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
+let g:ale_sign_column_always = 0
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '-'
+let g:ale_set_highlights = 1
+let g:ale_lint_on_save=0
+let g:ale_linters = {'jsx': ['stylelint', 'eslint'], 'js': ['eslint']}
+let g:ale_linters = {'js': ['eslint']}
+let g:ale_linter_aliases = {'jsx': 'css'}
+"nmap <Leader>s :ALEToggle<CR>
+
+"自动提示"
+let g:ycm_min_num_of_chars_for_completion = 2
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_complete_in_comments = 1
+" 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_cache_omnifunc=0
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
-
-" 比较喜欢用tab来选择补全...
-function! MyTabFunction ()
-    let line = getline('.')
-    let substr = strpart(line, -1, col('.')+1)
-    let substr = matchstr(substr, "[^ \t]*$")
-    if strlen(substr) == 0
-        return "\<tab>"
-    endif
-    return pumvisible() ? "\<c-n>" : "\<c-x>\<c-o>"
-endfunction
-inoremap <silent><tab> <c-r>=MyTabFunction()<cr>
-
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsEditSplit="vertical"
+let g:ycm_disable_for_files_larger_than_kb=950
+let g:ycm_show_diagnostics_ui = 0
+"设置关健字触发补全
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.', ' ', '(', '[', '&'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
 
 "let g:ycm_use_ultisnips_completer = 0
 
@@ -275,13 +254,64 @@ let g:ycm_filetype_blacklist = {
       \ 'gitcommit' : 1,
       \}
 
+
+set completeopt-=preview
+
+
+
+" 比较喜欢用tab来选择补全...
+function! MyTabFunction ()
+    let line = getline('.')
+    let substr = strpart(line, -1, col('.')+1)
+    let substr = matchstr(substr, "[^ \t]*$")
+    if strlen(substr) == 0
+        return "\<tab>"
+    endif
+    return pumvisible() ? "\<c-n>" : "\<c-x>\<c-o>"
+endfunction
+inoremap <silent><tab> <c-r>=MyTabFunction()<cr>
+
+
+
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+imap <s-tab> <Plug>UltiSnipsExpandTriggerOrJump
+
+
+
 " To disable the highlighting put the line
 let g:JSLintHighlightErrorLine = 0
 
-" 恢复session
-let g:session_directory = "~/.vim/sessionbackup"
-let g:session_autoload = "yes"
-let g:session_autosave = "yes"
-let g:session_command_aliases = 1
+
 " vim_json option
 let g:vim_json_syntax_conceal = 0
+
+let g:vim_jsx_pretty_colorful_config = 1
+
+let g:jsx_ext_required = 0
+
+
+"ctrl+n切换相对行号还是绝对行号
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber number
+  else
+    set nonumber relativenumber
+  endif
+endfunc
+
+nnoremap <silent> <C-n> :call NumberToggle()<cr>
+nnoremap <F9> :silent make<CR>:redraw!<CR>
+
+autocmd QuickFixCmdPost [^l]* nested botright cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+"start plugin"
+if has("nvim")
+    set viminfo='100,n$HOME/.vim/nvimInfo/info/viminfo'
+else
+    set viminfo='100,n$HOME/.vim/vimInfo/viminfo'
+endif
+
+"split-term.vim
+set splitbelow

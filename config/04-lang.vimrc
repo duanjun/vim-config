@@ -11,3 +11,4 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 "vim 打开文件时的尝试使用的编码
 set fileformats=unix,dos,mac
+set shell=/bin/zsh

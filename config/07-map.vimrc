@@ -9,25 +9,25 @@ map <silent><F2> :ls<cr>
 " NERDTree快捷键
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
-"快速找字母
-nmap <silent> f <Leader><Leader>f
 "打开浏览器快捷键"
 nmap <silent> <Leader>c :silent !open -a /Applications/Google\ Chrome.app file://%:p&<CR>:redraw!<CR>
 
 " 快速编辑.vimrc
 nmap <leader>v  :e! $VIMHOME/vimrc<cr>
-nmap <leader>v1 :e! $VIMHOME/01-vundle.vimrc<cr>
-nmap <leader>v2 :e! $VIMHOME/02-basic.vimrc<cr>
-nmap <leader>v3 :e! $VIMHOME/03-gui.vimrc<cr>
-nmap <leader>v4 :e! $VIMHOME/04-lang.vimrc<cr>
-nmap <leader>v5 :e! $VIMHOME/05-autocmd.vimrc<cr>
-nmap <leader>v6 :e! $VIMHOME/06-plugin.vimrc<cr>
-nmap <leader>v7 :e! $VIMHOME/07-map.vimrc<cr>
-nmap <leader>s :UltiSnipsEdit<cr>
+nmap <leader>v1 :e! $VIMHOME/config/01-loader.vimrc<cr>
+nmap <leader>v2 :e! $VIMHOME/config/02-basic.vimrc<cr>
+nmap <leader>v3 :e! $VIMHOME/config/03-gui.vimrc<cr>
+nmap <leader>v4 :e! $VIMHOME/config/04-lang.vimrc<cr>
+nmap <leader>v5 :e! $VIMHOME/config/05-autocmd.vimrc<cr>
+nmap <leader>v6 :e! $VIMHOME/config/06-plugin.vimrc<cr>
+nmap <leader>v7 :e! $VIMHOME/config/07-map.vimrc<cr>
+nmap <leader>tern :e! $HOME/.tern-config<cr>
+
 
 "nmap <leader>r  :! node --harmony %<cr>
-nmap <leader>r  :! babel-node %<cr>
-nmap <leader>l  :! lebab % -o % <cr>
+"nmap <leader>r  :AsyncRun babel-node %<cr>
+nmap <leader>r  :AsyncRun ts-node %<cr>
+"nmap <leader>l  :! lebab % -o % <cr>
 "babel
 nmap <silent><leader>b :Babel vertical<cr>
 "nginx
@@ -84,7 +84,22 @@ nmap <silent> <F6> :set invpaste<CR>
 
 " 切换行号
 "nmap <silent> <F5> :set invnu<CR>
-nmap <silent> <F5> :SyntasticCheck<cr>
+"nmap <silent> <F5> :SyntasticCheck<cr>
+" <f5> 编译和运行C
+"map <f5> :call CompileRunGcc()<cr>
+func! CompileRunGcc()
+exec "w"
+exec "!gcc % -o %<"
+exec "! ./%<"
+endfunc
+
+"< F5> 编译和运行C++
+"map <f5> :call CompileRunGpp()<cr>
+func! CompileRunGpp()
+exec "w"
+exec "!g++ % -o %<"
+exec "! ./%<"
+endfunc
 
 " ^L 刷新
 nnoremap <silent><C-h> :nohlsearch<CR>
@@ -143,6 +158,7 @@ map <silent> <leader>gl :Glog <cr>
 map <silent> <leader>gp :Git push <cr>
 map <silent> <leader>gw :Gwrite <cr>
 
+
 " 恢复session
 nnoremap <leader>so :OpenSession <CR>
 nnoremap <leader>ss :SaveSession <CR>
@@ -165,3 +181,6 @@ nmap <leader>wps :OpenBookmark umu_wap_student<cr>
 nmap <leader>test :OpenBookmark test<cr>
 nmap <leader>git :OpenBookmark github<cr>
 nmap <leader>node :OpenBookmark node_modules<cr>
+
+"split-term
+nmap <C-j> :10Term <cr>

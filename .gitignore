@@ -2,6 +2,12 @@
 .DS_Store
 bundle/**
 undodir/**
+nvimInfo/**
+vimInfo/**
+plugged/**
+autoload/**
 sessionbackup/**
+vimbackup/**
+session.vim
 .vim/**
 .vim
