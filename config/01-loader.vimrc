@@ -29,6 +29,7 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify'
 "Plug 'w0rp/ale'
 Plug 'mklabs/split-term.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "Plug options

@@ -3,7 +3,6 @@
 "262626 background
 colo molokai
 "121212 background
-"colo atom-dark
 " 语法高亮
 syntax enable
 syntax on
@@ -57,6 +56,7 @@ set showtabline=0 " 隐藏Tab栏
 
  " statusline start {{
 set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{&paste=='nopaste'?'':'[p]'}
+set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")
