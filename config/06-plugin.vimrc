@@ -275,7 +275,6 @@ inoremap <silent><tab> <c-r>=MyTabFunction()<cr>
 
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
-imap <s-tab> <Plug>UltiSnipsExpandTriggerOrJump
 
 
 
