@@ -315,3 +315,4 @@ let g:limelight_conceal_ctermfg = 240
 "autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "root
 let g:rooter_patterns = ['.git/']
+let g:rooter_silent_chdir = 1
