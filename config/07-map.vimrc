@@ -172,4 +172,4 @@ nmap <leader>git :OpenBookmark github<cr>
 nmap <leader>node :OpenBookmark node_modules<cr>
 
 "split-term
-nmap <C-j> :10Term <cr>
+nmap <C-j> :15Term <cr>

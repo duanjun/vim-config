@@ -1,19 +1,8 @@
-"zencoding配置{{
-let g:user_emmet_settings = {
-  \  'indentation' : '  ',
-  \  'perl' : {
-  \    'aliases' : {
-  \      'req' : 'require '
-  \    },
-  \    'snippets' : {
-  \      'use' : "use strict\nuse warnings\n\n",
-  \      'warn' : "warn \"|\";",
-  \    }
-  \  }
-  \}
-let g:user_emmet_expandabbr_key = '<c-j>'
-let g:use_emmet_complete_tag = 1
-"zencoding end}}
+"emmet
+"默认key 为ctrl+y ，还需要按，
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode='i'
+autocmd FileType html,css EmmetInstall
 
 " NERDTree Ignore
 let NERDTreeWinPos='right' "NerdTree窗口显示在右边
@@ -25,19 +14,6 @@ let NERDTreeIgnore= ['\.git', '\.DS_Store']
 let NERDTreeWinSize=40
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_new_tab=0
-
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
-
 
 
 "ctrp start {{
@@ -314,3 +290,5 @@ endif
 
 "split-term.vim
 set splitbelow
+
+"let g:Lf_ShortcutF = '<C-P>'

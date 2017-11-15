@@ -29,7 +29,10 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify'
 "Plug 'w0rp/ale'
+
+"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mklabs/split-term.vim'
+Plug 'junegunn/goyo.vim'
 
 augroup load_us_ycm
   autocmd!
