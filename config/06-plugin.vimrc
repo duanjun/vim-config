@@ -35,7 +35,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " ag is fast enough that CtrlP doesn't need to cache
 let g:ctrlp_use_caching = 0
-
 "ctrp end }}
 
 
@@ -292,3 +291,27 @@ endif
 set splitbelow
 
 "let g:Lf_ShortcutF = '<C-P>'
+"
+" Color name (:help cterm-colors) or ANSI code
+"
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+"function! s:goyo_enter()
+  "set noshowmode
+  "set noshowcmd
+  "set scrolloff=999
+  "Limelight
+"endfunction
+
+"function! s:goyo_leave()
+  "set showmode
+  "set showcmd
+  "set scrolloff=5
+  "Limelight!
+"endfunction
+
+"autocmd! User GoyoEnter nested call <SID>goyo_enter()
+"autocmd! User GoyoLeave nested call <SID>goyo_leave()
+"root
+let g:rooter_patterns = ['.git/']

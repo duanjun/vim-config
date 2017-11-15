@@ -2,7 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tomasr/molokai'
 "Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-rooter'
 Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -32,7 +34,6 @@ Plug 'mhinz/vim-startify'
 
 "Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mklabs/split-term.vim'
-Plug 'junegunn/goyo.vim'
 
 augroup load_us_ycm
   autocmd!

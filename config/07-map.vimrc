@@ -159,6 +159,8 @@ nnoremap en :lnext<cr>
 nnoremap ep :lprevious<cr>
 
 
+nnoremap <c-t> :FZF
+
 "cmap w!! w !sudo sh -c "cat > %" <CR>
 nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
 
