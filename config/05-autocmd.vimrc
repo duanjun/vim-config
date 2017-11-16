@@ -1,5 +1,4 @@
 autocmd FileType * set guifont=YaHei\ Consolas\ Hybrid:h19
-autocmd WinEnter * set guifont=YaHei\ Consolas\ Hybrid:h19
 
 " C/C++ specific settings
 autocmd FileType c,cpp,cc  set cindent
@@ -19,9 +18,7 @@ autocmd BufWritePre * :retab
 au BufRead,BufNewFile *.vm set filetype=html
 au BufRead,BufNewFile *.less set filetype=less
 au BufRead,BufNewFile *.js set fmr=/*,*/
-"au BufRead,BufNewFile *.ts set filetype=typescript
 au BufRead,BufNewFile *.ts  setlocal filetype=typescript
-"au BufRead,BufNewFile *.json set filetype=javascript
 au BufRead,BufNewFile *.html set filetype=html
 au BufRead,BufNewFile *.dwt set filetype=html
 au BufNewFile,BufRead *.as setf actionscript
@@ -35,7 +32,6 @@ autocmd! BufWritePost 04-lang.vimrc source $VIMHOME/config/04-lang.vimrc
 autocmd! BufWritePost 05-autocmd.vimrc source $VIMHOME/config/05-autocmd.vimrc
 autocmd! BufWritePost 06-plugin.vimrc source $VIMHOME/config/06-plugin.vimrc
 autocmd! BufWritePost 07-map.vimrc source $VIMHOME/config/07-map.vimrc
-
 
 
 "按esc可以直接从中文切换回英文

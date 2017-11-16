@@ -2,11 +2,14 @@
 "colo onedark
 "262626 background
 colo molokai
+set t_Co=256
 "121212 background
 " 语法高亮
+
 syntax enable
 syntax on
 " 右下角显示标尺
+
 set ruler
 " 显示当前模式
 set showmode
@@ -53,7 +56,10 @@ set guioptions-=L " 隐藏左侧滚动条
 set guioptions-=r " 隐藏右侧滚动条
 set guioptions-=b " 隐藏底部滚动条
 set showtabline=0 " 隐藏Tab栏
-
+"从下面分window
+set splitbelow
+"从右边分window
+set splitright
  " statusline start {{
 set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{&paste=='nopaste'?'':'[p]'}
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}

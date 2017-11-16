@@ -7,8 +7,9 @@ autocmd FileType html,css EmmetInstall
 " NERDTree Ignore
 let NERDTreeWinPos='right' "NerdTree窗口显示在右边
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
 let NERDTreeShowHidden=1
-let NERDTreeIgnore= ['\.git', '\.DS_Store']
+let NERDTreeIgnore= ['\.git', '\.DS_Store', '\.vscode']
 
 "设置NERDTree子窗口宽度
 let NERDTreeWinSize=40
@@ -36,61 +37,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 " ag is fast enough that CtrlP doesn't need to cache
 let g:ctrlp_use_caching = 0
 "ctrp end }}
-
-
-" {{ Win平台下窗口全屏组件 gvimfullscreen.dll
-" Ctrl + Enter 全屏切换
-" Shift + t 降低窗口透明度
-" Shift + y 加大窗口透明度
-" Shift + r 切换Vim是否总在最前面显示
-
-if has('gui_running') && has('gui_win32') && has('libcall')
-    let g:MyVimLib = 'gvimfullscreen.dll'
-    function! ToggleFullScreen()
-        call libcall(g:MyVimLib, 'ToggleFullScreen', 27 + 29*256 + 30*256*256)
-    endfunction
-    "映射 Ctrl+Enter 切换全屏vim
-    map <c-enter> <esc>:call ToggleFullScreen()<cr>
-
-    "Vim启动的时候自动调用InitVim 以去除Vim的白色边框
-    autocmd VimResized * call libcallnr(g:MyVimLib, 'InitVim', 0)
-    ""autocmd GUIEnter * simalt ~x
-    autocmd GUIEnter * call libcallnr(g:MyVimLib, 'InitVim', 0)
-    autocmd GUIEnter * call ToggleFullScreen()
-
-    let g:VimAlpha = 240
-    function! SetAlpha(alpha)
-        let g:VimAlpha = g:VimAlpha + a:alpha
-        if g:VimAlpha < 180
-            let g:VimAlpha = 180
-        endif
-        if g:VimAlpha > 255
-            let g:VimAlpha = 255
-        endif
-        call libcall(g:MyVimLib, 'SetAlpha', g:VimAlpha)
-    endfunction
-
-    " 默认设置透明
-    autocmd GUIEnter * call libcallnr(g:MyVimLib, 'SetAlpha', 220)
-
-    "增加Vim窗体的不透明度
-    nmap <s-t> <esc>:call SetAlpha(10)<cr>
-    "增加Vim窗体的透明度
-    nmap <s-y> <esc>:call SetAlpha(-10)<cr>
-
-    let g:VimTopMost = 0
-    function! SwitchVimTopMostMode()
-        if g:VimTopMost == 0
-            let g:VimTopMost = 1
-        else
-            let g:VimTopMost = 0
-        endif
-        call libcall(g:MyVimLib, 'EnableTopMost', g:VimTopMost)
-    endfunction
-    "切换Vim是否在最前面显示
-    nmap <s-r> <esc>:call SwitchVimTopMostMode()<cr>
-endif
-" }}
 
 
 "/*功能函数 {{*/"
@@ -144,15 +90,6 @@ function! JumpInFile(back, forw)
     endwhile
 endfunction
 "/*功能函数 End}}/"
-
-
-" indentline 插件用的
-let g:indentLine_char = '┆'
-" Vim
-let g:indentLine_color_term = 239
-"GVim
-"let g:indentLine_color_gui = '#A4E57E'
-let g:tern_show_signature_in_pum = 1
 
 
 " 语法检查插件
@@ -232,36 +169,16 @@ let g:ycm_filetype_blacklist = {
 
 set completeopt-=preview
 
-
-
-" 比较喜欢用tab来选择补全...
-function! MyTabFunction ()
-    let line = getline('.')
-    let substr = strpart(line, -1, col('.')+1)
-    let substr = matchstr(substr, "[^ \t]*$")
-    if strlen(substr) == 0
-        return "\<tab>"
-    endif
-    return pumvisible() ? "\<c-n>" : "\<c-x>\<c-o>"
-endfunction
-inoremap <silent><tab> <c-r>=MyTabFunction()<cr>
-
-
-
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 
 
-" To disable the highlighting put the line
-let g:JSLintHighlightErrorLine = 0
-
-
 " vim_json option
 let g:vim_json_syntax_conceal = 0
 
+let g:jsx_pragma_required = 1
 let g:vim_jsx_pretty_colorful_config = 1
-
 let g:jsx_ext_required = 0
 
 
@@ -287,32 +204,6 @@ else
     set viminfo='100,n$HOME/.vim/vimInfo/viminfo'
 endif
 
-"split-term.vim
-set splitbelow
 
-"let g:Lf_ShortcutF = '<C-P>'
-"
-" Color name (:help cterm-colors) or ANSI code
-"
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-
-"function! s:goyo_enter()
-  "set noshowmode
-  "set noshowcmd
-  "set scrolloff=999
-  "Limelight
-"endfunction
-
-"function! s:goyo_leave()
-  "set showmode
-  "set showcmd
-  "set scrolloff=5
-  "Limelight!
-"endfunction
-
-"autocmd! User GoyoEnter nested call <SID>goyo_enter()
-"autocmd! User GoyoLeave nested call <SID>goyo_leave()
-"root
-let g:rooter_patterns = ['.git/']
-let g:rooter_silent_chdir = 1
+"matchup
+let g:matchup_matchparen_status_offscreen = 0

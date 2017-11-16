@@ -4,8 +4,8 @@ Plug 'tomasr/molokai'
 "Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-rooter'
-Plug 'tmhedberg/matchit'
+"Plug 'tmhedberg/matchit'
+Plug 'andymass/matchup.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
@@ -22,22 +22,16 @@ Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --all', 'on': []}
 Plug 'maksimr/vim-jsbeautify'
 
-"代码段
-Plug 'SirVer/ultisnips', {'on': []}
-Plug 'honza/vim-snippets', {'on': []}
-
 Plug 'hail2u/vim-css3-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
-Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify', {'do': 'npm install'}
 "Plug 'w0rp/ale'
-
-"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'mklabs/split-term.vim'
 
 augroup load_us_ycm
   autocmd!
-  autocmd InsertEnter * call plug#load('vim-snippets', 'ultisnips', 'YouCompleteMe')
+  autocmd InsertEnter * call plug#load('YouCompleteMe')
 augroup END
 
 call plug#end()

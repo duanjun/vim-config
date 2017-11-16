@@ -1,11 +1,5 @@
 "short-cut"
 
-map <space> /
-"map <a-space> ?
-
-" 打开文件历史菜单
-map <silent><F2> :ls<cr>
-
 " NERDTree快捷键
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
@@ -38,13 +32,7 @@ nmap <silent><Leader>ih :e /etc/hosts<CR>
 nmap <silent><Leader>wh :e /Volumes/C/Windows/System32/drivers/etc/hosts<CR>
 "目录相关
 nmap <silent><Leader>lc :cd %:p:h<CR>
-"nmap <silent><Leader>umu :cd /Users/duanjun/Documents/dj/umu_project<CR>
-"nmap <silent><Leader>umu :cd /Users/duanjun/Documents/project/umuglobal/<CR>
-nmap <silent><Leader>umu :cd /Users/duanjun/Documents/project/<CR>
-nmap <silent><Leader>bd :cd /Users/duanjun/Documents/dj/baidu_project<CR>
 
-"autocmd VimEnter * cd /Users/duanjun/Documents/project/
-"autocmd VimEnter * NERDTree
 
 " 使用上下来调节窗口大小
 nmap <silent> <s-UP> <C-W>+:let t:flwwinlayout = winrestcmd()<CR>
@@ -110,12 +98,6 @@ nnoremap <silent><C-h> :nohlsearch<CR>
 nmap <F7> :cprev<CR>
 nmap <F8> :cnext<CR>
 
-" 更方便的 <Esc>
-"map <silent> <esc><esc> :q<cr>
-
-" 打开一个临时的缓冲区随便记东西
-nmap <Leader>S :Scratch<cr>
-
 
 " 快速跳到下一个驼峰位置
 nmap t` /[A-Z]<cr>
@@ -148,18 +130,13 @@ autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 nnoremap <silent> <c-k> :call JumpInFile("\<c-i>", "\<c-o>")<cr>
 nnoremap <silent> <c-j> :call JumpInFile("\<c-o>", "\<c-i>")<cr>
 
-" 恢复session
-nnoremap <leader>so :OpenSession <CR>
-nnoremap <leader>ss :SaveSession <CR>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
 
 " 语法错误提示上一个下一个切换
 nnoremap en :lnext<cr>
 nnoremap ep :lprevious<cr>
 
 
-nnoremap <c-t> :FZF
+nnoremap <c-t> :FZF <cr>
 
 "cmap w!! w !sudo sh -c "cat > %" <CR>
 nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
@@ -173,5 +150,6 @@ nmap <leader>test :OpenBookmark test<cr>
 nmap <leader>git :OpenBookmark github<cr>
 nmap <leader>node :OpenBookmark node_modules<cr>
 
-"split-term
-nmap <C-j> :15Term <cr>
+"terminal
+tnoremap <ESC><ESC> <C-\><C-N>
+nnoremap <c-j> :term ++rows=15<cr>

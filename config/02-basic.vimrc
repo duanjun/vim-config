@@ -42,7 +42,7 @@ set matchpairs+==:;
 set matchpairs+=":"
 set matchpairs+=':'
 "设置history 记住多少行
-set history=700
+set history=100
 " 开启魔法匹配
 set magic
 "允许文件未保存的时候切换缓冲区
@@ -53,7 +53,7 @@ set backspace=indent,eol,start
 " 打开文件类型支持
 filetype plugin indent on
 " 递归向上查找 tags
-set tags=tags
+"set tags=tags
 
 set ambiwidth=double
 set mouse=v
