@@ -4,6 +4,7 @@ Plug 'tomasr/molokai'
 "Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-rooter'
 "Plug 'tmhedberg/matchit'
 Plug 'andymass/matchup.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -20,7 +21,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'chr4/nginx.vim', {'for': 'nginx.conf'}
 Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --all', 'on': []}
-Plug 'maksimr/vim-jsbeautify'
+Plug 'prettier/vim-prettier', {'do': 'npm install',  'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'html'] }
 
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'

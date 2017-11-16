@@ -207,3 +207,25 @@ endif
 
 "matchup
 let g:matchup_matchparen_status_offscreen = 0
+
+"vim-prettier
+" max line length that prettier will wrap on
+let g:prettier#config#print_width = 120
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 4
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+" print semicolons
+let g:prettier#config#semi = 'true'
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'false'
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true'
+" none|es5|all
+let g:prettier#config#trailing_comma = 'all'
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+let g:prettier#config#parser = 'flow'
+" cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = 'prefer-file'

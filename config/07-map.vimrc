@@ -109,22 +109,13 @@ nnoremap <silent> <space> za
 nmap <silent> <tab> <esc>:bn<cr>
 nmap <silent> <s-tab> <esc>:bp<cr>
 
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for json
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-" for jsx
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
-" for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-
-vnoremap <c-h> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
-
+autocmd FileType javascript noremap <buffer> <Leader>p :PrettierAsync<cr>
+autocmd FileType json noremap <buffer> <Leader>p :PrettierAsync<cr>
+autocmd FileType jsx noremap <buffer> <Leader>p :PrettierAsync<cr>
+autocmd FileType css noremap <buffer>  <Leader>p :PrettierAsync<cr>
+autocmd FileType typescript noremap <buffer> <Leader>p :PrettierAsync<cr>
+autocmd FileType markdown noremap <buffer> <Leader>p :PrettierAsync<cr>
+autocmd FileType html noremap <buffer> <Leader>p :PrettierAsync<cr>
 
 " Prevent jump out from current buffer
 nnoremap <silent> <c-k> :call JumpInFile("\<c-i>", "\<c-o>")<cr>
@@ -149,6 +140,10 @@ nmap <leader>wps :OpenBookmark umu_wap_student<cr>
 nmap <leader>test :OpenBookmark test<cr>
 nmap <leader>git :OpenBookmark github<cr>
 nmap <leader>node :OpenBookmark node_modules<cr>
+
+"vim-rooter
+let g:rooter_silent_chdir = 1
+let g:rooter_patterns = ['.git/']
 
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
