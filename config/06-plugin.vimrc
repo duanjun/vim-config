@@ -8,6 +8,7 @@ autocmd FileType html,css EmmetInstall
 let NERDTreeWinPos='right' "NerdTree窗口显示在右边
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
+let NERDTreeStatusline='   '
 let NERDTreeShowHidden=1
 let NERDTreeIgnore= ['\.git', '\.DS_Store', '\.vscode']
 
@@ -28,15 +29,30 @@ let g:ctrlp_custom_ignore = {
     \ 'file': 'exe|so|dll|zip|rar|tar|png|jpg|ico|swp$',
     \ }
 
+" The Silver Searcher
+if executable('ag')
+" Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
 " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-if exists('g:ctrlp_user_command')
-    unlet g:ctrlp_user_command
-endif
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 0
+endif
+
 "ctrp end }}
+
+function! Search(string) abort
+  let saved_shellpipe = &shellpipe
+  let &shellpipe = '>'
+  try
+    execute 'Ag!' shellescape(a:string, 1)
+  finally
+    let &shellpipe = saved_shellpipe
+  endtry
+endfunction
+nnoremap <C-F> :call Search("")<left><left>
 
 
 "/*功能函数 {{*/"

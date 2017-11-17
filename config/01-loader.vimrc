@@ -10,7 +10,7 @@ Plug 'andymass/matchup.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
-Plug 'rking/ag.vim'
+Plug 'duanjun/ag.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'taiansu/nerdtree-ag' , { 'on': 'NERDTreeToggle' }
 Plug 'leafgarland/typescript-vim'
