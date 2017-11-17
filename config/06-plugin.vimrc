@@ -92,6 +92,8 @@ endfunction
 "/*功能函数 End}}/"
 
 
+
+
 " 语法检查插件
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}

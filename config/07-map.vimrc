@@ -93,7 +93,6 @@ endfunc
 nnoremap <silent><C-h> :nohlsearch<CR>
 
 
-
 " F7/F8 切换下一条 quickfix
 nmap <F7> :cprev<CR>
 nmap <F8> :cnext<CR>
@@ -133,13 +132,7 @@ nnoremap <c-t> :FZF <cr>
 nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
 
 "nerdtree bookmark
-nmap <silent> <c-b> :Bookmark <cr>
-nmap <leader>pc :OpenBookmark umu_pc<cr>
-nmap <leader>wp :OpenBookmark umu_wap<cr>
-nmap <leader>wps :OpenBookmark umu_wap_student<cr>
-nmap <leader>test :OpenBookmark test<cr>
-nmap <leader>git :OpenBookmark github<cr>
-nmap <leader>node :OpenBookmark node_modules<cr>
+nmap <silent> <Leader>nb :Bookmark <cr>
 
 "vim-rooter
 let g:rooter_silent_chdir = 1

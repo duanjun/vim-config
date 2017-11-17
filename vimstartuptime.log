@@ -1,0 +1,134 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- VIM STARTING ---
+000.091  000.086: Allocated generic buffers
+000.432  000.341: locale set
+000.436  000.004: clipboard setup
+000.442  000.006: window checked
+000.873  000.431: inits 1
+000.877  000.004: parsing arguments
+000.878  000.001: expanding arguments
+005.608  004.730: shell init
+005.932  000.324: Termcap init
+005.948  000.016: inits 2
+006.904  000.956: init highlight
+009.730  002.128  002.128: sourcing /Users/duanjun/.vim/autoload/plug.vim
+013.635  000.046  000.046: sourcing /Users/duanjun/.vim/plugged/nginx.vim/ftdetect/nginx.vim
+014.351  000.024  000.024: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/css.vim
+014.437  000.025  000.025: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/graphql.vim
+014.519  000.025  000.025: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/javascript.vim
+014.595  000.021  000.021: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/json.vim
+014.673  000.025  000.025: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/less.vim
+014.772  000.041  000.041: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/markdown.vim
+014.852  000.026  000.026: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/scss.vim
+014.928  000.022  000.022: sourcing /Users/duanjun/.vim/plugged/vim-prettier/ftdetect/typescript.vim
+015.357  000.032  000.032: sourcing /Users/duanjun/.vim/plugged/vim-json/ftdetect/json.vim
+033.095  000.090  000.090: sourcing /Users/duanjun/.vim/plugged/typescript-vim/ftdetect/typescript.vim
+033.272  000.052  000.052: sourcing /Users/duanjun/.vim/plugged/vim-es6/ftdetect/es6.vim
+033.429  000.083  000.083: sourcing /Users/duanjun/.vim/plugged/tern_for_vim/ftdetect/tern.vim
+033.658  000.120  000.120: sourcing /Users/duanjun/.vim/plugged/vim-javascript/ftdetect/javascript.vim
+033.867  000.139  000.139: sourcing /Users/duanjun/.vim/plugged/vim-jsx/ftdetect/javascript.vim
+034.052  017.574  017.090: sourcing /usr/local/share/vim/vim80/filetype.vim
+034.277  000.041  000.041: sourcing /usr/local/share/vim/vim80/ftplugin.vim
+034.492  000.041  000.041: sourcing /usr/local/share/vim/vim80/indent.vim
+035.163  000.196  000.196: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+035.286  000.498  000.302: sourcing /usr/local/share/vim/vim80/syntax/synload.vim
+035.315  000.721  000.223: sourcing /usr/local/share/vim/vim80/syntax/syntax.vim
+035.368  027.825  007.033: sourcing /Users/duanjun/.vim/config/01-loader.vimrc
+035.801  000.054  000.054: sourcing /usr/local/share/vim/vim80/filetype.vim
+035.982  000.015  000.015: sourcing /usr/local/share/vim/vim80/ftplugin.vim
+036.172  000.013  000.013: sourcing /usr/local/share/vim/vim80/indent.vim
+036.273  000.862  000.780: sourcing /Users/duanjun/.vim/config/02-basic.vimrc
+038.735  000.193  000.193: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+039.321  000.181  000.181: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+039.799  000.182  000.182: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+040.209  002.004  001.448: sourcing /Users/duanjun/.vim/plugged/molokai/colors/molokai.vim
+040.793  000.171  000.171: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+041.347  000.172  000.172: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+041.781  000.177  000.177: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+042.262  001.986  001.466: sourcing /Users/duanjun/.vim/plugged/molokai/colors/molokai.vim
+042.595  000.204  000.204: sourcing /usr/local/Cellar/vim/8.0.1250/share/vim/vim80/syntax/nosyntax.vim
+043.288  000.169  000.169: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+043.813  000.163  000.163: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+044.213  000.160  000.160: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+044.651  001.830  001.338: sourcing /Users/duanjun/.vim/plugged/molokai/colors/molokai.vim
+044.731  001.976  000.146: sourcing /usr/local/share/vim/vim80/syntax/synload.vim
+044.758  002.431  000.251: sourcing /usr/local/share/vim/vim80/syntax/syntax.vim
+045.022  000.159  000.159: sourcing /usr/local/Cellar/vim/8.0.1250/share/vim/vim80/syntax/nosyntax.vim
+045.781  000.181  000.181: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+046.323  000.159  000.159: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+046.782  000.165  000.165: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+047.206  001.935  001.430: sourcing /Users/duanjun/.vim/plugged/molokai/colors/molokai.vim
+047.284  002.083  000.148: sourcing /usr/local/share/vim/vim80/syntax/synload.vim
+047.311  002.507  000.265: sourcing /usr/local/share/vim/vim80/syntax/syntax.vim
+047.380  011.072  002.144: sourcing /Users/duanjun/.vim/config/03-gui.vimrc
+047.513  000.094  000.094: sourcing /Users/duanjun/.vim/config/04-lang.vimrc
+047.824  000.278  000.278: sourcing /Users/duanjun/.vim/config/05-autocmd.vimrc
+048.114  000.257  000.257: sourcing /Users/duanjun/.vim/config/06-plugin.vimrc
+048.553  000.401  000.401: sourcing /Users/duanjun/.vim/config/07-map.vimrc
+048.564  041.412  000.623: sourcing $HOME/.vimrc
+048.569  000.253: sourcing vimrc file(s)
+049.584  000.820  000.820: sourcing /Users/duanjun/.fzf/plugin/fzf.vim
+050.092  000.219  000.219: sourcing /Users/duanjun/.vim/plugged/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+050.233  000.541  000.322: sourcing /Users/duanjun/.vim/plugged/ctrlp.vim/plugin/ctrlp.vim
+050.520  000.187  000.187: sourcing /Users/duanjun/.vim/plugged/vim-rooter/plugin/rooter.vim
+050.987  000.175  000.175: sourcing /usr/local/share/vim/vim80/plugin/matchparen.vim
+052.345  001.137  001.137: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup.vim
+054.371  001.533  001.533: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/delim.vim
+054.747  000.059  000.059: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/re.vim
+055.682  000.213  000.213: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/util.vim
+060.752  000.224  000.224: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/matchparen.vim
+061.582  000.141  000.141: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/pos.vim
+061.802  000.120  000.120: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/perf.vim
+062.501  000.056  000.056: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/misc.vim
+062.838  000.227  000.227: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/motion.vim
+063.252  000.083  000.083: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/perf.vim
+063.459  000.105  000.105: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/pos.vim
+063.579  000.023  000.023: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/re.vim
+063.827  000.153  000.153: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/text_obj.vim
+064.149  000.126  000.126: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/transmute.vim
+064.349  000.105  000.105: sourcing /Users/duanjun/.vim/plugged/matchup.vim/autoload/matchup/util.vim
+065.692  015.076  010.596: sourcing /Users/duanjun/.vim/plugged/matchup.vim/plugin/matchup.vim
+070.195  004.385  004.385: sourcing /Users/duanjun/.vim/plugged/nerdcommenter/plugin/NERD_commenter.vim
+070.438  000.141  000.141: sourcing /Users/duanjun/.vim/plugged/emmet-vim/plugin/emmet.vim
+070.609  000.080  000.080: sourcing /Users/duanjun/.vim/plugged/ag.vim/plugin/ag.vim
+070.801  000.105  000.105: sourcing /Users/duanjun/.vim/plugged/vim-gitbranch/plugin/gitbranch.vim
+072.069  001.163  001.163: sourcing /Users/duanjun/.vim/plugged/asyncrun.vim/plugin/asyncrun.vim
+079.035  006.857  006.857: sourcing /Users/duanjun/.vim/plugged/vim-easymotion/plugin/EasyMotion.vim
+079.828  000.635  000.635: sourcing /Users/duanjun/.vim/plugged/vim-surround/plugin/surround.vim
+080.152  000.165  000.165: sourcing /Users/duanjun/.vim/plugged/vim-startify/plugin/startify.vim
+080.637  000.069  000.069: sourcing /usr/local/share/vim/vim80/plugin/getscriptPlugin.vim
+080.993  000.330  000.330: sourcing /usr/local/share/vim/vim80/plugin/gzip.vim
+081.253  000.234  000.234: sourcing /usr/local/share/vim/vim80/plugin/logiPat.vim
+081.299  000.020  000.020: sourcing /usr/local/share/vim/vim80/plugin/manpager.vim
+081.340  000.017  000.017: sourcing /usr/local/share/vim/vim80/plugin/matchparen.vim
+081.874  000.512  000.512: sourcing /usr/local/share/vim/vim80/plugin/netrwPlugin.vim
+081.944  000.022  000.022: sourcing /usr/local/share/vim/vim80/plugin/rrhelper.vim
+082.012  000.036  000.036: sourcing /usr/local/share/vim/vim80/plugin/spellfile.vim
+082.202  000.154  000.154: sourcing /usr/local/share/vim/vim80/plugin/tarPlugin.vim
+082.335  000.100  000.100: sourcing /usr/local/share/vim/vim80/plugin/tohtml.vim
+082.530  000.163  000.163: sourcing /usr/local/share/vim/vim80/plugin/vimballPlugin.vim
+082.801  000.232  000.232: sourcing /usr/local/share/vim/vim80/plugin/zipPlugin.vim
+082.809  002.196: loading plugins
+082.874  000.065: loading packages
+082.967  000.093: loading after plugins
+082.974  000.007: inits 3
+083.295  000.321: reading viminfo
+083.341  000.046: setting raw mode
+083.356  000.015: start termcap
+083.374  000.018: clearing screen
+083.512  000.138: opening buffers
+084.189  000.105  000.105: sourcing /Users/duanjun/.vim/plugged/vim-gitbranch/autoload/gitbranch.vim
+084.366  000.749: BufEnter autocommands
+084.368  000.002: editing files in windows
+085.932  001.003  001.003: sourcing /Users/duanjun/.vim/plugged/vim-startify/autoload/startify.vim
+086.701  000.430  000.430: sourcing /Users/duanjun/.vim/plugged/vim-startify/autoload/startify/fortune.vim
+095.064  000.333  000.333: sourcing /Users/duanjun/.vim/plugged/vim-startify/syntax/startify.vim
+100.948  014.814: VimEnter autocommands
+100.951  000.003: before starting main loop
+102.246  001.295: first screen update
+102.248  000.002: --- VIM STARTED ---

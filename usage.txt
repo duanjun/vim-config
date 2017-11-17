@@ -1,0 +1,15 @@
+"启动时间
+vim --startuptime ~/.vim/vimstartuptime.log
+"详细日志
+vim -V20 ./.vim/vim.log
+
+- 0: 当level设置为0的话只是简单的给出Vim正在做什么(Vim will give messages about what it is doing)；
+- 1: 这里会给出viminfo文件读写的信息(When the viminfo file is read or written)；
+- 2: 这里会给出文件被:source的信息(When a file is :sourceed)；
+- 5: 显示了所有搜到的tags文件与include的文件(Every searched tags file and include file)；
+- 8: 显示了一组要执行的autocommand的文件(Files for which a group of autocommands is executed)；
+- 9: 显示所有执行的autocommand(Every executed autocommadns);
+- 12: 显示所有执行的function(Every executed function);
+- 13: 显示异常的抛出，捕获，结束或者消除(When an exceptions is thrown, caught, finished or discarded)；
+- 14: 显示所有在:finally期间的所有(Anything pending in a :finally clause)；
+- 15: 显示所有执行的Ex command(Every executed Ex commands, truncated at 200 characters)；

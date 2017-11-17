@@ -61,8 +61,7 @@ set splitbelow
 "从右边分window
 set splitright
  " statusline start {{
-set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{&paste=='nopaste'?'':'[p]'}
-set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")
