@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 Plug 'tomasr/molokai'
 "Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -18,7 +17,6 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-surround'
-Plug 'isRuslan/vim-es6'
 Plug 'chr4/nginx.vim', {'for': 'nginx.conf'}
 Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'Valloric/YouCompleteMe', {'do': './install.py --all', 'on': []}

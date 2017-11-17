@@ -20,7 +20,8 @@ let g:nerdtree_tabs_open_on_new_tab=0
 
 "ctrp start {{
 let g:ctrlp_regexp = 1
-let g:ctrlp_cmd = 'CtrlPMixed'
+"let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_files = 500
 set wildignore+='*/tmp/*,*.so,*.swp,*.zip'
@@ -154,7 +155,7 @@ let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
-let g:ycm_disable_for_files_larger_than_kb=950
+let g:ycm_disable_for_files_larger_than_kb=300
 let g:ycm_show_diagnostics_ui = 0
 "设置关健字触发补全
 let g:ycm_semantic_triggers =  {
@@ -171,7 +172,7 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
-"let g:ycm_use_ultisnips_completer = 0
+let g:ycm_use_ultisnips_completer = 0
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
