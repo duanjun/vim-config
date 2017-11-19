@@ -25,13 +25,7 @@ au BufNewFile,BufRead *.as setf actionscript
 
 
 " vimrc编辑后自动重新加载
-autocmd! BufWritePost 01-vundle.vimrc source $VIMHOME/config/01-loader.vimrc
-autocmd! BufWritePost 02-basic.vimrc source $VIMHOME/config/02-basic.vimrc
-autocmd! BufWritePost 03-gui.vimrc source $VIMHOME/config/03-gui.vimrc
-autocmd! BufWritePost 04-lang.vimrc source $VIMHOME/config/04-lang.vimrc
-autocmd! BufWritePost 05-autocmd.vimrc source $VIMHOME/config/05-autocmd.vimrc
-autocmd! BufWritePost 06-plugin.vimrc source $VIMHOME/config/06-plugin.vimrc
-autocmd! BufWritePost 07-map.vimrc source $VIMHOME/config/07-map.vimrc
+autocmd! BufWritePost *.vimrc source $MYVIMRC
 
 
 "按esc可以直接从中文切换回英文
