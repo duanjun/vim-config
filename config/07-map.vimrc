@@ -19,11 +19,12 @@ nmap <leader>tern :e! $HOME/.tern-config<cr>
 
 
 "nmap <leader>r  :! node --harmony %<cr>
-"nmap <leader>r  :AsyncRun babel-node %<cr>
-nmap <leader>r  :AsyncRun ts-node %<cr>
+"nmap <leader>r  :AsyncRun ts-node %<cr>
+nmap <leader>r  :AsyncRun <right>
+"new | r!somecommand
 "nmap <leader>l  :! lebab % -o % <cr>
-"babel
-nmap <silent><leader>b :Babel vertical<cr>
+
+
 "nginx
 nmap <silent><Leader>in :e /usr/local/etc/nginx/nginx.conf<CR>
 nmap <silent><Leader>wn :e /Volumes/C/nginx-1.8.0/conf/nginx.conf<CR>
