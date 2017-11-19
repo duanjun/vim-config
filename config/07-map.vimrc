@@ -140,4 +140,9 @@ let g:rooter_patterns = ['.git/']
 
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
-nnoremap <silent> <c-j> :term ++close ++rows=15<cr>
+
+if has('nvim')
+    nnoremap <silent> <c-j> :15new<cr>:<term>
+else
+    nnoremap <silent> <c-j> :term++close ++rows=15<cr>
+endif

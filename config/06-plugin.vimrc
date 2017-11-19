@@ -248,3 +248,6 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'flow'
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
+
+"deoplete
+let g:deoplete#enable_at_startup = 1
