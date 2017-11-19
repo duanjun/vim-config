@@ -63,7 +63,6 @@ nnoremap <silent><C-h> :nohlsearch<CR>
 nmap <F7> :cprev<CR>
 nmap <F8> :cnext<CR>
 
-
 " 快速跳到下一个驼峰位置
 nmap t` /[A-Z]<cr>
 
@@ -82,17 +81,11 @@ autocmd FileType typescript noremap <buffer> <Leader>p :PrettierAsync<cr>
 autocmd FileType markdown noremap <buffer> <Leader>p :PrettierAsync<cr>
 autocmd FileType html noremap <buffer> <Leader>p :PrettierAsync<cr>
 
-" Prevent jump out from current buffer
-nnoremap <silent> <c-k> :call JumpInFile("\<c-i>", "\<c-o>")<cr>
-nnoremap <silent> <c-j> :call JumpInFile("\<c-o>", "\<c-i>")<cr>
-
 
 " 语法错误提示上一个下一个切换
 nnoremap en :lnext<cr>
 nnoremap ep :lprevious<cr>
 
-
-nnoremap <c-t> :FZF <cr>
 
 "cmap w!! w !sudo sh -c "cat > %" <CR>
 nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
@@ -100,9 +93,6 @@ nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
 "nerdtree bookmark
 nmap <silent> <Leader>nb :Bookmark <cr>
 
-"vim-rooter
-let g:rooter_silent_chdir = 1
-let g:rooter_patterns = ['.git/']
 
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
