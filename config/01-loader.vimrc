@@ -7,6 +7,7 @@ Plug 'airblade/vim-rooter'
 Plug 'andymass/matchup.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+Plug 'ivalkeen/nerdtree-execute'
 Plug 'mattn/emmet-vim'
 Plug 'duanjun/ag.vim'
 Plug 'itchyny/vim-gitbranch'
