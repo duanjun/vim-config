@@ -4,7 +4,6 @@ Plug 'tomasr/molokai'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-rooter'
-"Plug 'tmhedberg/matchit'
 Plug 'andymass/matchup.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
