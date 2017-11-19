@@ -4,10 +4,12 @@ bundle/**
 undodir/**
 nvimInfo/**
 vimInfo/**
+gnvimInfo/**
 plugged/**
 autoload/**
 sessionbackup/**
 vimbackup/**
 session.vim
+*.log
 .vim/**
 .vim

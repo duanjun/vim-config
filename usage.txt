@@ -2,6 +2,8 @@
 vim --startuptime ~/.vim/vimstartuptime.log
 "详细日志
 vim -V20 ./.vim/vim.log
+"long press
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 - 0: 当level设置为0的话只是简单的给出Vim正在做什么(Vim will give messages about what it is doing)；
 - 1: 这里会给出viminfo文件读写的信息(When the viminfo file is read or written)；
