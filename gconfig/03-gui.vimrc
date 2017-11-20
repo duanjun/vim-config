@@ -9,6 +9,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent " 开启新行时使用智能自动缩进
+set nu
 
 " 状态栏显示键入的命令
 set showcmd

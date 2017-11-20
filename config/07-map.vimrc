@@ -142,8 +142,11 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
+command! -nargs=* St 15split | terminal <args>
+command! -nargs=* Vst vsplit | terminal <args>
+
 if has('nvim')
-    nnoremap <silent> <c-j> :15new<cr>:<term>
+    nnoremap <silent> <c-j> :St <cr>
 else
     nnoremap <silent> <c-j> :term++close ++rows=15<cr>
 endif
