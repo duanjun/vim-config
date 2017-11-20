@@ -1,6 +1,6 @@
 "色彩主题
-"colo molokai
-"colorscheme onedark
+colo molokai
+"colo onedark
 
 " 缩进设置
 set smarttab
@@ -20,7 +20,7 @@ set cursorline
 set ignorecase smartcase
 
 " 永远显示状态栏
-set laststatus=0
+set laststatus=2
 " 命令行区的高度
 set cmdheight=1
 
@@ -30,8 +30,8 @@ set nowrap
 set splitbelow
 "从右边分window
 set splitright
- "statusline start {{
-"set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
+"statusline start
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")

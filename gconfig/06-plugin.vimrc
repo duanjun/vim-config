@@ -13,7 +13,7 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore= ['\.git', '\.DS_Store', '\.vscode']
 
 "设置NERDTree子窗口宽度
-let NERDTreeWinSize=60
+let NERDTreeWinSize=40
 let g:nerdtree_tabs_open_on_gui_startup=0
 let g:nerdtree_tabs_open_on_new_tab=0
 

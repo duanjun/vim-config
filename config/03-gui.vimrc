@@ -34,7 +34,7 @@ set showcmd
 " 高亮当前行
 set cursorline
 " 高亮当前列
-set cursorcolumn
+"set cursorcolumn
 " 智能大小写判断
 set ignorecase smartcase
 " 永远显示状态栏
