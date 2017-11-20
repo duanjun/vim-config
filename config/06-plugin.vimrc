@@ -20,8 +20,8 @@ let g:nerdtree_tabs_open_on_new_tab=0
 
 "ctrp start {{
 let g:ctrlp_regexp = 1
-"let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_cmd = 'CtrlPCurWD'
+let g:ctrlp_cmd = 'CtrlPMixed'
+"let g:ctrlp_cmd = 'CtrlPCurWD'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_max_files = 500
 set wildignore+='*/tmp/*,*.so,*.swp,*.zip'
@@ -251,8 +251,9 @@ let g:prettier#config#config_precedence = 'prefer-file'
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
-"let g:deoplete#sources#ternjs#docs = 1
-"let g:deoplete#sources#ternjs#guess = 0
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#guess = 0
+let g:deoplete#sources#ternjs#filetypes = ['javascript', 'jsx', 'javascript.jsx', 'vue']
 
 " Use tern_for_vim.
 let g:tern#command = ["tern"]
