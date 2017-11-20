@@ -1,6 +1,6 @@
 "色彩主题
-colo molokai
-"colo onedark
+"colo molokai
+colo onedark
 
 " 缩进设置
 set smarttab
