@@ -1,6 +1,6 @@
 "色彩主题
 "colo molokai
-" 语法高亮
+"colorscheme onedark
 
 " 缩进设置
 set smarttab
@@ -15,12 +15,12 @@ set showcmd
 " 高亮当前行
 set cursorline
 " 高亮当前列
-set cursorcolumn
+"set cursorcolumn
 " 智能大小写判断
 set ignorecase smartcase
 
 " 永远显示状态栏
-set laststatus=2
+set laststatus=0
 " 命令行区的高度
 set cmdheight=1
 

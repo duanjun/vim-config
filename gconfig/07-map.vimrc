@@ -93,6 +93,9 @@ nmap <silent> <C-s> :w !sudo tee > /dev/null % <CR>
 "nerdtree bookmark
 nmap <silent> <Leader>nb :Bookmark <cr>
 
+"vim-rooter
+let g:rooter_silent_chdir = 1
+let g:rooter_patterns = ['.git/']
 
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>

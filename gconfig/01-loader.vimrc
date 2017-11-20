@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'tomasr/molokai'
 Plug 'itchyny/vim-gitbranch'
+Plug 'airblade/vim-rooter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'ivalkeen/nerdtree-execute'
