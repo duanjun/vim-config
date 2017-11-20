@@ -86,13 +86,13 @@ set autoread
 set autowrite
 
 "智能提示
-set completeopt=preview,menu
+"set completeopt=preview,menu
 set completeopt=menuone,longest
 set pumheight=10
 
 
 "disable doc preview in omnicomplete
-set cot-=preview
+"set cot-=preview
 
 "折叠配置
 set foldenable              " 开始折叠

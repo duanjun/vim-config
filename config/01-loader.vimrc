@@ -27,7 +27,7 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify', {'do': 'npm install'}
 "Plug 'w0rp/ale'
-Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+"Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
