@@ -1,6 +1,14 @@
 "色彩主题
-"colo molokai
+
+"one dark
 colo onedark
+hi StatusLine   guifg=#abb2bf guibg=#2c323c
+hi StatusLineNC guifg=#abb2bf guibg=#2c323c
+hi VertSplit guifg=#3E4452 guibg=none
+set fillchars+=vert:│
+
+"molokai
+"colo molokai
 
 " 缩进设置
 set smarttab
@@ -33,6 +41,7 @@ set splitbelow
 set splitright
 "statusline start
 set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
+
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")
