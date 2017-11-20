@@ -10,7 +10,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 let NERDTreeStatusline='   '
 let NERDTreeShowHidden=1
-let NERDTreeIgnore= ['\.git', '\.DS_Store', '\.vscode']
+let NERDTreeIgnore= ['\.git$', '\.DS_Store', '\.vscode']
 
 "设置NERDTree子窗口宽度
 let NERDTreeWinSize=40
