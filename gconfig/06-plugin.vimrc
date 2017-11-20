@@ -31,6 +31,8 @@ function! RemoveTrailingWhitespace()
 endfunction
 
 
+
+
 function! Search(string) abort
   let saved_shellpipe = &shellpipe
   let &shellpipe = '>'
