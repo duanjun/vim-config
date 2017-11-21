@@ -100,7 +100,8 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
-command! -nargs=* St 15split | set nonu | terminal <args>
+command! -nargs=* St 15split | set nonu | set nocul | terminal <args>
+
 command! -nargs=* Vst vsplit | terminal <args>
 nnoremap <silent> <c-j> :St <cr>
 
