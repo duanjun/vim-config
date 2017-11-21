@@ -6,6 +6,7 @@ nvimInfo/**
 vimInfo/**
 gnvimInfo/**
 plugged/**
+gplugged/**
 autoload/**
 sessionbackup/**
 vimbackup/**

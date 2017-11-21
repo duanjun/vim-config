@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/gPlugged')
 
 Plug 'tomasr/molokai'
 Plug 'itchyny/vim-gitbranch'
