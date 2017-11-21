@@ -5,6 +5,7 @@ set encoding=utf-8
 let &termencoding=&encoding
 "vim 在与屏幕/键盘交互使用的编码
 set langmenu=zh_CN.UTF-8
+language zh_CN.UTF-8
 language message zh_CN.UTF-8
 set fileencoding=utf-8
 "vim当前编辑的文件在存储时的编码

@@ -103,3 +103,5 @@ tnoremap <ESC><ESC> <C-\><C-N>
 command! -nargs=* St 15split | set nonu | terminal <args>
 command! -nargs=* Vst vsplit | terminal <args>
 nnoremap <silent> <c-j> :St <cr>
+
+nnoremap <expr> <c-6> (empty(@#) ? ':bprev' : ':b#')."\<cr>"
