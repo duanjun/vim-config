@@ -74,6 +74,10 @@ nnoremap <silent> <space> za
 nmap <silent> <tab> <esc>:bn<cr>
 nmap <silent> <s-tab> <esc>:bp<cr>
 
+"tab切换
+nmap <silent> <c-tab> <esc>:tabn<cr>
+nmap <silent> <c-s-tab> <esc>:tabp<cr>
+
 autocmd FileType javascript noremap <buffer> <Leader>p :PrettierAsync<cr>
 autocmd FileType json noremap <buffer> <Leader>p :PrettierAsync<cr>
 autocmd FileType jsx noremap <buffer> <Leader>p :PrettierAsync<cr>
@@ -101,7 +105,7 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
-command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | terminal <args>
+command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
 
 command! -nargs=* Vst vsplit | terminal <args>
 nnoremap <silent> <c-j> :St <cr>
