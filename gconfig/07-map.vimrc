@@ -74,7 +74,9 @@ nnoremap <silent> <space> za
 nmap <silent> <tab> <esc>:bn<cr>
 nmap <silent> <s-tab> <esc>:bp<cr>
 
+
 "tab切换
+nmap <silent> <c-t> <esc>:tabnew<cr>
 nmap <silent> <c-tab> <esc>:tabn<cr>
 nmap <silent> <c-s-tab> <esc>:tabp<cr>
 
