@@ -76,7 +76,6 @@ nmap <silent> <s-tab> <esc>:bp<cr>
 
 
 "tab切换
-nmap <silent> <c-t> <esc>:tabnew<cr>
 nmap <silent> <c-tab> <esc>:tabn<cr>
 nmap <silent> <c-s-tab> <esc>:tabp<cr>
 
@@ -107,9 +106,11 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
-command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
 
+command! -nargs=* Tt tabnew | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
+command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
 command! -nargs=* Vst vsplit | terminal <args>
 nnoremap <silent> <c-j> :St <cr>
+nmap <silent> <c-t> :Tt<cr>
 
 nnoremap <expr> <c-6> (empty(@#) ? ':bprev' : ':b#')."\<cr>"
