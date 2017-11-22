@@ -9,6 +9,7 @@ nmap <silent> <Leader>c :silent !open -a /Applications/Google\ Chrome.app file:/
 " 快速编辑.vimrc
 "nmap <leader>v  :e! $VIMHOME/.vim/ginit.vim<cr>
 nmap <leader>v  :e! $HOME/.oni/config.js<cr>
+nmap <leader>v0 :e! $VIMHOME/usage.txt<cr>
 nmap <leader>v1 :e! $VIMHOME/gconfig/01-loader.vimrc<cr>
 nmap <leader>v2 :e! $VIMHOME/gconfig/02-basic.vimrc<cr>
 nmap <leader>v3 :e! $VIMHOME/gconfig/03-gui.vimrc<cr>
@@ -100,7 +101,7 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
-command! -nargs=* St 15split | set nonu | set nocul | terminal <args>
+command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | terminal <args>
 
 command! -nargs=* Vst vsplit | terminal <args>
 nnoremap <silent> <c-j> :St <cr>

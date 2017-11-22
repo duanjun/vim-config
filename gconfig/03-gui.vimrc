@@ -40,8 +40,9 @@ set splitbelow
 "从右边分window
 set splitright
 "statusline start
-set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
-
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %y\%=%l:%c\ %P\ of\ %L\ %M\ buffer:%n\ \ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
+"neo vim开启预览
+set inccommand=split
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")

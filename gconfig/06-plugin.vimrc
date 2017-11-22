@@ -58,6 +58,8 @@ endfunc
 nnoremap <silent> <C-n> :call NumberToggle()<cr>
 nnoremap <F9> :silent make<CR>:redraw!<CR>
 
+nnoremap <silent><F5> :redraw!<CR>
+
 autocmd QuickFixCmdPost [^l]* nested botright cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
