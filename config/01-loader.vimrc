@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
-"Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-rooter'

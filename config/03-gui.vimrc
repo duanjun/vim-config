@@ -1,13 +1,23 @@
-"色彩主题
-"colo onedark
-"262626 background
-colo molokai
-set t_Co=256
-"121212 background
-" 语法高亮
-
 syntax enable
 syntax on
+
+"色彩主题
+colo onedark
+"262626 background
+
+hi StatusLine   guifg=#abb2bf guibg=#2c323c
+hi StatusLineNC guifg=#abb2bf guibg=#2c323c
+hi VertSplit guifg=#3E4452 guibg=none
+
+hi StatusLine  ctermfg=145 ctermbg=236
+hi StatusLineNC ctermfg=59 ctermbg=236
+
+"colo molokai
+"set t_Co=256
+"121212 background
+"
+" 语法高亮
+
 " 右下角显示标尺
 
 set ruler
@@ -44,7 +54,7 @@ set cmdheight=1
 "窗体字体大小
 "set guifont=consolas:h16
 "set guifont=Monaco:h16
-set guifont=YaHei\ Consolas\ Hybrid:h19
+"set guifont=YaHei\ Consolas\ Hybrid:h19
 "set transparency=10
 "缩放窗口时不折行显示
 set nowrap
@@ -61,7 +71,7 @@ set splitbelow
 "从右边分window
 set splitright
  " statusline start {{
-set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %=%l:%c\ %P\ of\ %L\ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %y\%=%l:%c\ %P\ of\ %L\ %M\ buffer:%n\ \ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")

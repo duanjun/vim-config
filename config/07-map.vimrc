@@ -142,7 +142,8 @@ let g:rooter_patterns = ['.git/']
 "terminal
 tnoremap <ESC><ESC> <C-\><C-N>
 
-command! -nargs=* St 15split | terminal <args>
+command! -nargs=* Tt tabnew | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
+command! -nargs=* St 15split | set nonu | set nocul | nohlsearch | startinsert | terminal <args>
 command! -nargs=* Vst vsplit | terminal <args>
 
 if has('nvim')
