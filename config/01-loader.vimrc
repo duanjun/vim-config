@@ -18,7 +18,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-surround'
 Plug 'chr4/nginx.vim', {'for': 'nginx.conf'}
-"Plug 'Valloric/YouCompleteMe', {'do': './install.py --all', 'on': []}
+"Plug 'Valloric/YouCompleteMe', {'do': './install.py --js-completer', 'on': []}
 Plug 'prettier/vim-prettier', {'do': 'npm install',  'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'html'] }
 
 Plug 'hail2u/vim-css3-syntax'
@@ -27,7 +27,8 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify', {'do': 'npm install'}
 "Plug 'w0rp/ale'
-"Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
+
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
@@ -40,7 +41,6 @@ endif
 augroup load_us_ycm
   autocmd!
   "autocmd InsertEnter * call plug#load('YouCompleteMe')
-  "autocmd InsertEnter * call deoplete#enable()
 augroup END
 
 call plug#end()

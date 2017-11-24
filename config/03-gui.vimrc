@@ -7,7 +7,7 @@ colo onedark
 
 hi StatusLine   guifg=#abb2bf guibg=#2c323c
 hi StatusLineNC guifg=#abb2bf guibg=#2c323c
-hi VertSplit guifg=#3E4452 guibg=none
+hi VertSplit guifg=#3E4452
 
 hi StatusLine  ctermfg=145 ctermbg=236
 hi StatusLineNC ctermfg=59 ctermbg=236

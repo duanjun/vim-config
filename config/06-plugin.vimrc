@@ -255,6 +255,6 @@ let g:deoplete#sources#ternjs#docs = 1
 let g:deoplete#sources#ternjs#guess = 0
 let g:deoplete#sources#ternjs#filetypes = ['javascript', 'jsx', 'javascript.jsx', 'vue']
 
-" Use tern_for_vim.
+"" Use tern_for_vim.
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent", "--no-port-file"]
