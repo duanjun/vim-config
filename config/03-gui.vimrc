@@ -52,10 +52,7 @@ set laststatus=2
 " 命令行区的高度
 set cmdheight=1
 "窗体字体大小
-"set guifont=consolas:h16
-"set guifont=Monaco:h16
 "set guifont=YaHei\ Consolas\ Hybrid:h19
-"set transparency=10
 "缩放窗口时不折行显示
 set nowrap
 set list "显示不可见字符 默认的太不好看了
@@ -66,6 +63,7 @@ set guioptions-=L " 隐藏左侧滚动条
 set guioptions-=r " 隐藏右侧滚动条
 set guioptions-=b " 隐藏底部滚动条
 set showtabline=0 " 隐藏Tab栏
+
 "从下面分window
 set splitbelow
 "从右边分window

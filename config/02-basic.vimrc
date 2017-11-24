@@ -8,7 +8,6 @@ iab xname duanjun
 
 " 模式行
 set modeline
-"set modelines=2
 
 " 允许所有模式的虚拟编辑
 set ve=all

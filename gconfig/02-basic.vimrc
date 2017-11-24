@@ -14,6 +14,11 @@ set colorcolumn=120 "显示right margin, 7.3+
 set undodir=$HOME/.vim/undodir
 set backupdir=$HOME/.vim/vimbackup  "设置集中备份
 
+" 开启魔法匹配
+set magic
+
+"允许文件未保存的时候切换缓冲区
+set hidden
 
 "自动保存撤销历史到撤销文件。读入文件到缓冲区时，自动恢复撤销历史
 set undofile
