@@ -18,7 +18,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'tpope/vim-surround'
 Plug 'chr4/nginx.vim', {'for': 'nginx.conf'}
-"Plug 'Valloric/YouCompleteMe', {'do': './install.py --js-completer', 'on': []}
 Plug 'prettier/vim-prettier', {'do': 'npm install',  'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'html'] }
 
 Plug 'hail2u/vim-css3-syntax'
@@ -27,16 +26,13 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify', {'do': 'npm install'}
 "Plug 'w0rp/ale'
-Plug 'ternjs/tern_for_vim', {'do': 'npm install'}
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
-else
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+"if !has('nvim')
+    "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+
+Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+Plug 'roxma/nvim-completion-manager'
 
 augroup load_us_ycm
   autocmd!

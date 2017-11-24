@@ -248,13 +248,3 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'flow'
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
-
-"deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#ternjs#docs = 1
-let g:deoplete#sources#ternjs#guess = 0
-let g:deoplete#sources#ternjs#filetypes = ['javascript', 'jsx', 'javascript.jsx', 'vue']
-
-"" Use tern_for_vim.
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent", "--no-port-file"]
