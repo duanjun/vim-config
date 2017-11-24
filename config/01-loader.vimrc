@@ -25,13 +25,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'mhinz/vim-startify', {'do': 'npm install'}
+
 "Plug 'w0rp/ale'
 
 "if !has('nvim')
     "Plug 'roxma/vim-hug-neovim-rpc'
 "endif
 
-Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+Plug 'duanjun/nvim-cm-tern', {'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 Plug 'roxma/nvim-completion-manager'
 
 augroup load_us_ycm
