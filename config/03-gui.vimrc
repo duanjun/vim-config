@@ -69,7 +69,7 @@ set splitbelow
 "从右边分window
 set splitright
  " statusline start {{
-set statusline=[%{CurDir()}]\ [%F%m%r%h]\ %y\ %=[%l\/\%L:%c\%M]\ [%{&fenc!=''?&fenc:&enc}\ buffer:%n]\ \ %{gitbranch#name()}\ [%{CurMode()}]
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ %y\ %=[%l\/\%L:%c\%M]\ [%{&fenc!=''?&fenc:&enc}\ buffer:%n]\ %{gitbranch#name()}\ [%{CurMode()}]
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")
