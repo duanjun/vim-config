@@ -22,7 +22,7 @@ hi StatusLineNC ctermfg=59 ctermbg=236
 
 set ruler
 " 显示当前模式
-set showmode
+"set showmode
 " 高亮括号对
 set showmatch
 set matchtime=0
@@ -69,9 +69,16 @@ set splitbelow
 "从右边分window
 set splitright
  " statusline start {{
-set statusline=[%{CurDir()}]\ [%F%m%r%h]\ \ %{&fenc!=''?&fenc:&enc}\ %y\%=%l:%c\ %P\ of\ %L\ %M\ buffer:%n\ \ %{gitbranch#name()}\ \%{&paste=='nopaste'?'':'[p]'}
+set statusline=[%{CurDir()}]\ [%F%m%r%h]\ %y\ %=[%l\/\%L:%c\%M]\ [%{&fenc!=''?&fenc:&enc}\ buffer:%n]\ \ %{gitbranch#name()}\ [%{CurMode()}]
 
 function! CurDir()
     let home = substitute(expand("$HOME"), "\\", "\\\\\\", "g")
     return substitute(getcwd(), home, "~", "g")
+endfunction
+function! CurMode()
+    let g:currentmode={
+        \'n': 'NORMAL', 'i': 'INSERT', 'R': 'REPLACE', 'v': 'VISUAL', 'V': 'VISUAL', "\<C-v>": 'V-BLOCK',
+        \'c': 'COMMAND', 's': 'SELECT', 'S': 'S-LINE', "\<C-s>": 'S-BLOCK', 't': 'TERMINAL'
+    \}
+    return toupper(g:currentmode[mode()])
 endfunction
